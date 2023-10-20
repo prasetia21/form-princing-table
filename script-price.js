@@ -1,10 +1,10 @@
-window.onload = function() {
-  document.getElementsByClassName('agen1')[0].value = '6';
-  document.getElementsByClassName('agen1')[1].value = '6';
-  document.getElementsByClassName('agen1')[2].value = '6';
-  document.getElementsByClassName('agen1')[3].value = '3';
-  document.getElementsByClassName('agen1')[4].value = '3';
-  }
+window.onload = function () {
+  document.getElementsByClassName("agen1")[0].value = "6";
+  document.getElementsByClassName("agen1")[1].value = "6";
+  document.getElementsByClassName("agen1")[2].value = "6";
+  document.getElementsByClassName("agen1")[3].value = "3";
+  document.getElementsByClassName("agen1")[4].value = "3";
+};
 
 function priceReseller1() {
   let ss = 99000;
@@ -40,10 +40,11 @@ function priceReseller1() {
   let totalQty = qtySs + qtyWs + qtyCc + qtyNo + qtyLc;
 
   console.log(totalQty);
-  
+
   if (totalQty < maxQty) {
     document.getElementById("message-kuota").style.visibility = "visible";
-    document.getElementById("message-kuota").innerHTML = "Quantity Minimal Paket belum Terpenuhi";
+    document.getElementById("message-kuota").innerHTML =
+      "Quantity Minimal Paket belum Terpenuhi";
     document.getElementById("btnReseller").style.visibility = "hidden";
   } else {
     document.getElementById("message-kuota").style.visibility = "hidden";
@@ -64,15 +65,14 @@ let qtyLc = parseInt(document.getElementsByClassName("agen1")[4].value);
 
 let totalQty = qtySs + qtyWs + qtyCc + qtyNo + qtyLc;
 
-
-
 if (totalQty < maxQty) {
   document.getElementById("message-kuota").style.visibility = "visible";
-  document.getElementById("message-kuota").innerHTML = "Quantity Minimal Paket belum Terpenuhi";
+  document.getElementById("message-kuota").innerHTML =
+    "Quantity Minimal Paket belum Terpenuhi";
   document.getElementById("btnReseller").style.visibility = "hidden";
 } else {
   document.getElementById("message-kuota").style.visibility = "hidden";
-    document.getElementById("btnReseller").style.visibility = "visible";
+  document.getElementById("btnReseller").style.visibility = "visible";
 }
 
 // $(document).ready(function() {

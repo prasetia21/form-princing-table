@@ -1,10 +1,10 @@
-window.onload = function() {
-  document.getElementsByClassName('distributor1')[0].value = '12';
-  document.getElementsByClassName('distributor1')[1].value = '12';
-  document.getElementsByClassName('distributor1')[2].value = '12';
-  document.getElementsByClassName('distributor1')[3].value = '18';
-  document.getElementsByClassName('distributor1')[4].value = '18';
-  }
+window.onload = function () {
+  document.getElementsByClassName("distributor1")[0].value = "12";
+  document.getElementsByClassName("distributor1")[1].value = "12";
+  document.getElementsByClassName("distributor1")[2].value = "12";
+  document.getElementsByClassName("distributor1")[3].value = "18";
+  document.getElementsByClassName("distributor1")[4].value = "18";
+};
 
 function priceDistributor() {
   let ss2 = 99000;
@@ -31,19 +31,30 @@ function priceDistributor() {
 
   let minQty = 72;
 
-  let qtySs2 = parseInt(document.getElementsByClassName("distributor1")[0].value);
-  let qtyWs2 = parseInt(document.getElementsByClassName("distributor1")[1].value);
-  let qtyCc2 = parseInt(document.getElementsByClassName("distributor1")[2].value);
-  let qtyNo2 = parseInt(document.getElementsByClassName("distributor1")[3].value);
-  let qtyLc2 = parseInt(document.getElementsByClassName("distributor1")[4].value);
+  let qtySs2 = parseInt(
+    document.getElementsByClassName("distributor1")[0].value
+  );
+  let qtyWs2 = parseInt(
+    document.getElementsByClassName("distributor1")[1].value
+  );
+  let qtyCc2 = parseInt(
+    document.getElementsByClassName("distributor1")[2].value
+  );
+  let qtyNo2 = parseInt(
+    document.getElementsByClassName("distributor1")[3].value
+  );
+  let qtyLc2 = parseInt(
+    document.getElementsByClassName("distributor1")[4].value
+  );
 
   let totalQty2 = qtySs2 + qtyWs2 + qtyCc2 + qtyNo2 + qtyLc2;
 
   console.log(totalQty2);
-  
+
   if (totalQty2 < minQty) {
     document.getElementById("message-kuota2").style.visibility = "visible";
-    document.getElementById("message-kuota2").innerHTML = "Quantity Minimal Paket belum Terpenuhi";
+    document.getElementById("message-kuota2").innerHTML =
+      "Quantity Minimal Paket belum Terpenuhi";
     document.getElementById("btnDistributor").style.visibility = "hidden";
   } else {
     document.getElementById("message-kuota2").style.visibility = "hidden";
@@ -51,7 +62,8 @@ function priceDistributor() {
   }
 
   document.getElementById("totalDistributor").innerHTML = rupiah(totalDisc2);
-  document.querySelector('input[name="TotalPriceDistributor"]').value = totalDisc2;
+  document.querySelector('input[name="TotalPriceDistributor"]').value =
+    totalDisc2;
 }
 
 let minQty = 72;
@@ -64,15 +76,14 @@ let qtyLc2 = parseInt(document.getElementsByClassName("distributor1")[4].value);
 
 let totalQty2 = qtySs2 + qtyWs2 + qtyCc2 + qtyNo2 + qtyLc2;
 
-
-
 if (totalQty2 < minQty) {
   document.getElementById("message-kuota2").style.visibility = "visible";
-  document.getElementById("message-kuota2").innerHTML = "Quantity Minimal Paket belum Terpenuhi";
+  document.getElementById("message-kuota2").innerHTML =
+    "Quantity Minimal Paket belum Terpenuhi";
   document.getElementById("btnDistributor").style.visibility = "hidden";
 } else {
   document.getElementById("message-kuota2").style.visibility = "hidden";
-    document.getElementById("btnDistributor").style.visibility = "visible";
+  document.getElementById("btnDistributor").style.visibility = "visible";
 }
 
 // $(document).ready(function() {
