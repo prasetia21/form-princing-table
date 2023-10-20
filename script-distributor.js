@@ -1,3 +1,11 @@
+window.onload = function() {
+  document.getElementsByClassName('distributor1')[0].value = '12';
+  document.getElementsByClassName('distributor1')[1].value = '12';
+  document.getElementsByClassName('distributor1')[2].value = '12';
+  document.getElementsByClassName('distributor1')[3].value = '18';
+  document.getElementsByClassName('distributor1')[4].value = '18';
+  }
+
 function priceDistributor() {
   let ss2 = 99000;
   let ws2 = 99000;

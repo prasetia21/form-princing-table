@@ -1,3 +1,11 @@
+window.onload = function() {
+  document.getElementsByClassName('agen1')[0].value = '6';
+  document.getElementsByClassName('agen1')[1].value = '6';
+  document.getElementsByClassName('agen1')[2].value = '6';
+  document.getElementsByClassName('agen1')[3].value = '3';
+  document.getElementsByClassName('agen1')[4].value = '3';
+  }
+
 function priceReseller1() {
   let ss = 99000;
   let ws = 99000;
