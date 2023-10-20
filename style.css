@@ -70,7 +70,7 @@ body {
   .pricing-section .pricing-table {
     /*   float: left; */
     /*   width: 100%; */
-    margin: 15px;
+    margin: 0px;
     background: #ffffff;
     -moz-border-radius: 6px;
     -webkit-border-radius: 6px;
@@ -347,8 +347,8 @@ body {
     background: linear-gradient(#ae2320 0%, #811918 100%);
     box-shadow: 0 3px 10px -5px rgba(0, 0, 0, 1);
     position: absolute;
-    top: 19px;
-    left: -6px;
+    top: 22px;
+    left: -22px;
   }
 
   .pricing-section .ribbon span::before {
@@ -445,4 +445,19 @@ body {
     .contact-form .form-section {
         padding: 5% 5%;
     }
+  }
+
+
+
+
+  #process-reseller {
+    width: 25px;
+    display: none;
+    position: relative;
+  }
+
+  #process-distributor {
+    width: 25px;
+    display: none;
+    position: relative;
   }

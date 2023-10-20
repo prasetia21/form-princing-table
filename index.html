@@ -367,10 +367,14 @@
                           type="submit"
                           name="btnSubmit"
                           class="btn btn-lg btn-primary btn-block"
-                        >
-                          Ambil Paket Anda!
+                        ><img id="process-reseller" src="proses.svg" /><h6
+                        class="text-center"
+                        style="color: #1835d6"
+                        id="msg-reseller"
+                      ></h6>
+                          <span id="ambil-reseller">Ambil Paket Anda!</span>
                         </button>
-                        <span class="process" hidden>PROCESSING</span>
+                        
                       </p>
                       
                     </div>
@@ -679,17 +683,22 @@
                         >
                       </h3>
                     </div>
+               
                     <div class="pricing-table-sign-up-blue">
                       <p>
                         <button
                           id="btnDistributor"
                           type="submit"
-                          name="btnSubmit2"
+                          name="btnSubmit"
                           class="btn btn-lg btn-warning btn-block"
-                        >
-                          Ambil Paket Anda!
+                        ><img id="process-distributor" src="proses.svg" /><h6
+                        class="text-center"
+                        style="color: #1835d6"
+                        id="msg-distributor"
+                      ></h6>
+                          <span id="ambil-distributor">Ambil Paket Anda!</span>
                         </button>
-                        <span class="process" hidden>PROCESSING</span>
+                        
                       </p>
                       
                     </div>
@@ -730,6 +739,8 @@
                 let form = document.getElementById('formPrincing');
                 form.addEventListener("submit", e => {
                   e.preventDefault();
+                  document.getElementById('ambil-reseller').innerHTML= 'Mohon Menunggu...';
+                  document.getElementById('process-reseller').style.display = "inline-block"; 
                   fetch(form.action, {
                       method : "POST",
                       body: new FormData(document.getElementById("formPrincing")),
@@ -746,6 +757,8 @@
 
                 let form = document.getElementById('formPrincing');
                 form.addEventListener("submit", e => {
+                  document.getElementById('ambil-distributor').innerHTML= 'Mohon Menunggu...';
+                  document.getElementById('process-distributor').style.display = "inline-block"; 
                   e.preventDefault();
                   fetch(form.action, {
                       method : "POST",
